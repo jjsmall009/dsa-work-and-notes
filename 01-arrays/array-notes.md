@@ -29,3 +29,13 @@ The two approaches I used are as follows:
 2. **In place** - This second version is generally the better solution. It's just as fast but doesn't use any extra memory since is does it all in place. Using two pointers for the start and end of the array, walk through towards the middle and swap as you go. How neat!
 
 Now, in a real world scenario you'd just use something like the built-in `Collections` package or thereabouts but that's not what this repo is about.
+
+### > Nth Smallest Element (NthSmallest.java)
+
+Given an array of distinct values return the Nth smallest element of the array (where `1 <= N <= Array.length`).
+
+At first glance this problem seems pretty simple, and indeed it is just a few lines of code if you're not too concerned with performance (though it's still pretty fast). Here are a few ways to go about solving this problem.
+
+1. **Sort It** - Sort the array and just return or get the Nth element from the sorted array. Most langauges will have built-in sorting algorithms that are `O(n*log(n))` and thus be pretty good for most situations. But there are faster ways to go about it.
+2. **Pivots / Quicksort Variation** - A more efficient solution is to realize that if you're going to try sorting the array then you only need to sort it until you are `N` elements sorted. There's no point in going beyond that becuase at that point you've already found what you're looking for. The code for this solution will have the nitty gritty details but on average it can be done in `O(n)` time, which is what the problem is looking for.
+3. **Min/Max Heaps** - After working on this for awhile and seeing what other solutions were out there I came across some methods involving heaps. I'm super rusty on heaps so I'll probably come back later and work on it some more.
