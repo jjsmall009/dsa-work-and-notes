@@ -10,9 +10,16 @@ Much like an array a linked list is a linear data strcuture but with some better
 
 ## Linked List Problems
 
-### > Detecting Loops
+### > Detecting Cycles
+
+There are a few common ways to detect a loop in a linked list.
+
+- **Hash table** - Traverse through the list and put each element into a hash table. If you get to an elemenet that's already in table then you have a cycle.
+- **Two pointers** - Use two pointers, one fast and one slow. If the fast one is ever at the same node as the slow one then you have a cycle.
 
 ### > Removing duplicates
+
+Use a hash set/map/etc. to store the values of nodes in the list. If you encounter a node that is already in the table then delete that node and move on.
 
 ### > Reverse a Linked List
 

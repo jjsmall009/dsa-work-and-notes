@@ -84,7 +84,7 @@ public class LinkedList{
     }
 
     public void getHead() {
-        System.out.println(this.head.data);
+        return this.head;
     }
 
     public int getSize() {
