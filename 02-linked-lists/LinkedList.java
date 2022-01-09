@@ -38,7 +38,7 @@ public class LinkedList{
         size += 1;
     }
 
-    // Deletes the first occurance of the key, if found
+    // Deletes the first occurrence of the key, if found
     public void deleteNode(int key) {
         Node current = head;
         Node previous = null;

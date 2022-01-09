@@ -1,5 +1,5 @@
 /**
-* A simple implemenation of reversing an integer array. There is both an in-place and out of
+* A simple implementation of reversing an integer array. There is both an in-place and out of
 * place version and an array printing helper function.
 **/
 public class ReverseArray {

@@ -1,6 +1,6 @@
 # Linked Lists - Notes
 
-Much like an array a linked list is a linear data strcuture but with some better (and some worse) features. A linked list is dynamic and you can grow or shrink it on the fly.
+Much like an array a linked list is a linear data structure but with some better (and some worse) features. A linked list is dynamic and you can grow or shrink it on the fly.
 
 ## Linked List Basics
 
@@ -14,7 +14,7 @@ Much like an array a linked list is a linear data strcuture but with some better
 
 There are a few common ways to detect a loop in a linked list.
 
-* **Hash table** - Traverse through the list and put each element into a hash table. If you get to an elemenet that's already in table then you have a cycle.
+* **Hash table** - Traverse through the list and put each element into a hash table. If you get to an element that's already in table then you have a cycle.
 * **Two pointers** - Use two pointers, one fast and one slow. If the fast one is ever at the same node as the slow one then you have a cycle.
 
 ### > Removing duplicates
@@ -23,7 +23,7 @@ Use a hash set/map/etc. to store the values of nodes in the list. If you encount
 
 ### > Reverse a Linked List (Reverse.java)
 
-An in place, no frills reversal is pretty straightfoward. All you need to do is reverse the direction of each pointer in the list? How to accomplish that?
+An in place, no frills reversal is pretty straightforward. All you need to do is reverse the direction of each pointer in the list? How to accomplish that?
 
 * Maintain three pointers for the previous, current, and next nodes.
 * Step through the list and set `current.next` to `previous`and then increment to the next nodes.
