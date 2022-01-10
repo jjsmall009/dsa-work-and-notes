@@ -6,11 +6,11 @@ public class ReverseArray {
     public static void main(String[] args) {
         int[] numbers = {9, 2, 15, 2, 22, 10, 6, 1, 2, 3, 5};
 
-        int[] reversed1 = reversed(numbers);
-        printArray(reversed1);
+        numbers = reversed(numbers);
+        printArray(numbers);
 
-        nPlaceReversed(numbers);
-        printArray(reversed2);
+        inPlaceReversed(numbers);
+        printArray(numbers);
 
     }
 

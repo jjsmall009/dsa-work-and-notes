@@ -5,7 +5,7 @@
  */
 
 public class Cycles {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         // Create a list
         // Add a cycle
         cycle = TwoPointers(list);

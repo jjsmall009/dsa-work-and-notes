@@ -8,8 +8,9 @@ public class LinkedList{
         private int data;
         private Node next;
 
-        public Node(int data) {
+        public Node(int data, Node n) {
             this.data = data;
+            this.next = n;
         }
     }
 
@@ -84,7 +85,7 @@ public class LinkedList{
     }
 
     public void getHead() {
-        return this.head;
+        System.out.println(this.head.data);
     }
 
     public int getSize() {
@@ -103,7 +104,7 @@ public class LinkedList{
 
 
     public static void main(String[] args) {
-        myList = new LinkedList(12);
+        LinkedList myList = new LinkedList(12);
         myList.addFirst(8);
         myList.addFirst(2);
         myList.addFirst(6);
