@@ -34,7 +34,17 @@ a data structure that is very fast for searching. This is the **binary search tr
   * Each node in the left subtree is less than N.
   * Each node in the right subtree is greater than N.
 
-![Binary Search Tree](../resources/bst_example.PNG)
+<img src="../resources/bst_example.PNG" width="500" />
+
+## Tree Traversal
+
+There are a few different ways to traverse a tree and visit every node.
+
+1. Pre-order - Starting with the root, visit the current node and then recursively visit the left subtree and then right subtree. So a "start from the top and work all the way down to the left".
+   - 7 - 5 - 3 - 1 - 4 - 6 - 12 - 9 - 8 - 10 - 15 - 13 - 17
+2. Post-order - Recursively visit current nodes left and then right subtree followed by the current node. So a "As far left and down as you can go".
+   - 1 - 4 - 3 - 6 - 5 - 8 - 10 - 9 - 13 - 17 - 15 - 12 - 7
+3. In-order - Recursively visit the current nodes left tree, then the current node, then the right tree. Basically it get the ascending order of nodes.
+   - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 12 - 13 - 15 - 17
 
 ## BST Problems
-
