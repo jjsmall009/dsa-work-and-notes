@@ -48,3 +48,22 @@ There are a few different ways to traverse a tree and visit every node.
    - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 12 - 13 - 15 - 17
 
 ## BST Problems
+
+### > Maximum Depth of a BST
+
+The depth is just the number of nodes from the root to the deepest leaf node. A recursive approach is the easiest way to find the depth of a binary tree.
+
+1. Find the depth of the current nodes (starting from the root) left subtree.
+2. Find the depth of the current nodes right subtree.
+3. Take the maximum of these two values and 1 to it to account for being another level deeper in the tree.
+
+You basically just work backwards from the leaf nodes and see which path to the root is largest. Recursion is pretty nifty.
+
+### > Symmetric Tree
+
+Write a function to check if a tree is symmetric or not.
+
+This is another instance where recursion saves the day. By recursively comparing the left and right subtrees of a given node we check if the values of the left and right nodes are equal. Two binary trees are mirrors of one another if:
+
+* The two root nodes have the same value.
+* The left subtree of one root node is a mirror reflection of the right subtree of the other root node.

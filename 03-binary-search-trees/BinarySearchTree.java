@@ -122,6 +122,21 @@ public class BinarySearchTree {
         }
     }   
 
+    public int getDepth() {
+        return depth(this.root);
+    }
+
+    public int depth(Node current) {
+        if (current == null) {
+            return 0;
+        }
+
+        int left = depth(current.left);
+        int right = depth(current.right);
+
+        return Math.max(left, right) + 1;
+    }
+
     public void getRoot() {
         System.out.println(root.value);
     }
@@ -145,5 +160,8 @@ public class BinarySearchTree {
         tree.preorderTraversal();
         System.out.println();
         tree.postorderTraversal();
+
+        int depth = tree.getDepth();
+        System.out.println("\n" + depth);
     }
 }
