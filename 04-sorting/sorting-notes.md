@@ -26,6 +26,25 @@ Just like selection sort we consider the array having two parts; a sorted and un
 
 ## Merge Sort
 
+Merge sort is a top tier sorting algorithm and you'll see why later. To implement merge sort:
+
+1. Recursively divide the starting array into smaller and smaller arrays until each array is one element long.
+2. Merge each sub-array into one another as you go back up the chain until there's one left and then you'll have a sorted array.
+
+In a slightly more verbose way:
+
+1. Find the midpoint of the array.
+2. Call mergeSort on the left sub-array.
+3. Call mergeSort on the right sub-array.
+4. Merge the two halves from the previous steps.
+
+**Time complexity** - This divide and conquer approach is pretty fast because of some properties.
+
+* Repeatedly dividing an array in half takes `O(logn)` time.
+* Merging two arrays takes `O(n)` time because you only have to iterate through the arrays once to merge them together.
+
+Thus the total time complexity is `O(n*logn)`, which beats the previous two sorting algorithms. There's some overhead from doing recursive calls but for the most part it's still very efficient.
+
 ## Quick Sort
 
 ## Radix Sort
