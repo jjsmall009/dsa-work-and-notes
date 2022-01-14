@@ -18,6 +18,12 @@ You can really think of it as having two sub-arrays, where the left sub-array is
 
 ## Insertion Sort
 
+Insertion sort works by iterating through an array and for each element, compare it to every other element in the array and inserting it where it belongs.
+
+Just like selection sort we consider the array having two parts; a sorted and unsorted sub-array. The first element in the array is sorted (since it's only 1 number long). Then go to the next element and compare it to each previous element. Work backwards and as long as the current element is less than any other element in the sorted part keep track of the index and insert it where it belongs.
+
+**Time complexity** - Since we're comparing each element in the array to a subset of every other element in the array (at worst), this will take `O(n^2)` time. There are `n` comparisons and `n` swaps, you get `n*n` and that's pretty slow compared to better sorting algorithms.
+
 ## Merge Sort
 
 ## Quick Sort
