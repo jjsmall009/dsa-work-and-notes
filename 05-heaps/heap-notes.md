@@ -29,3 +29,9 @@ For any `i-th` node in the heap array we can represent the other nodes related t
 * **swapDown** - After removing the root of the heap we need to set the next smallest/biggest element as the new root. To do this put the last element in the array as the root and then percolate down the heap until it is in the right spot. By continually swapping it down the tree, the next smallest element makes its way to the top.
 
 There are some other helper functions for checking left nodes, getting certain indices, etc. Check the code for that.
+
+## Heap Time Complexity
+
+* Find min/max = `O(1)`. Constant time because the min/max is always at the top of the heap.
+* Insertion = `O(logn)`. Since we insert a new node at the bottom of the tree, at worst we'll have to bubble it up to the very top and that is logarithmic.
+* Removing the min/max = `O(logn)`. Same as insertion but we're moving from top to bottom instead.

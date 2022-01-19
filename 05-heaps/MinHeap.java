@@ -26,8 +26,18 @@ public class MinHeap {
         return (currentIndex * 2) + 2;
     }
 
-    public void insert(int element) {
+    public boolean hasParent(int currentIndex) {
+        if (currentIndex > 0)
+            return true;
+        else
+            return false;
+    }
 
+    // Add the new element to the end of the array and swap upwards
+    public void insert(int element) {
+        this.heapArray[currentSize] = element;
+        this.currentSize += 1;
+        swapUp(this.currentSize - 1);
     }
 
     public void removeRoot() {
@@ -37,7 +47,15 @@ public class MinHeap {
     // After inserting a new element, see if we need to percolate it up the tree in orer
     // to maintain the heap property.
     public void swapUp() {
-
+        while (hasParent(i)) {
+            int pIndex = parentIndex(i);
+            if (this.heapArray[i] < this.heapArray[pIndex]) {
+                    int tmp = this.heapArray[pIndex];
+                    this.heapArray[pIndex] = this.heapArray[i];
+                    this.heapArray[i] = tmp;
+            }
+            i = pIndex;
+        }
     }
 
     // After removing the root element, we need to put the next smallest element at the top.
@@ -45,8 +63,22 @@ public class MinHeap {
 
     }
 
+    public void printHeap() {
+        for(int i = 0; i < this.currentSize; i++) {
+            System.out.print(this.heapArray[i] + " ");
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
+        MinHeap myHeap = new MinHeap(10);
 
+        myHeap.insert(6);
+        myHeap.insert(10);
+        myHeap.insert(8);
+        myHeap.insert(7);
+        myHeap.printHeap();
+        myHeap.insert(3);
+        myHeap.printHeap();
     }
 }
